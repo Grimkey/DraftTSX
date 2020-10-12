@@ -1,12 +1,18 @@
 import React from 'react'
 import { RawDraftContentState } from 'draft-js'
 import RichText from "../components/richtext";
+import { NextPage } from 'next'
+import {CurrentPrice} from '../modules/coindesk'
+import Fetch from 'isomorphic-unfetch'
+import Layout from '../components/layout'
 
-const App = () => {
-  return (
-     <RichText initialData={initialData}/>
-  )
-}
+const Index: NextPage<Props> = (props: Props) => (
+    <Layout>
+      <div>
+        <RichText initialData={initialData}/>
+      </div>
+    </Layout>
+)
 
 const initialData: RawDraftContentState = {
   blocks: [
@@ -68,4 +74,4 @@ const initialData: RawDraftContentState = {
   entityMap: {},
 }
 
-export default App
+export default Index
