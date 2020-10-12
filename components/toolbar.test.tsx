@@ -8,7 +8,7 @@ import {ToolbarButton, ToolBar} from './toolbar'
 
 afterEach(cleanup)
 
-test('Link changes the class when hovered', () => {
+test('ToolBar toggle callback', () => {
     let toggled = false
     const onToggle = (arg0: string) => {
         toggled = !toggled
